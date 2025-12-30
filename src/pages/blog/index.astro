@@ -1,0 +1,25 @@
+---
+import { getCollection } from 'astro:content';
+import BaseHead from '../../components/BaseHead.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
+import Header from '../../components/Header.astro';
+
+const posts = (await getCollection('blog'));
+---
+
+<!doctype html>
+<html lang="en">
+	<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	<Header/>
+	<body>
+		{
+			posts.map((post) => (
+				<li>
+					<a href={`/blog/${post.slug}/`}>
+					    <h4>{post.data.title}</h4>
+					</a>
+				</li>
+			))
+        }
+	</body>
+</html>
