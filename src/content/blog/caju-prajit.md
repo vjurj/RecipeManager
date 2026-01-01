@@ -1,5 +1,5 @@
 ---
 title: Caju prajit
-heroImage: src/assets/images/img_3106.jpeg
+heroImage: /caju_prajit.jpg
 ---
 Ai caju. Il prajesti
