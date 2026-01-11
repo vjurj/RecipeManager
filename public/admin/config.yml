@@ -1,6 +1,9 @@
 backend:
-  name: git-gateway
+  name: github
   branch: master # Branch to update (optional; defaults to master)
+  auth_type: implicit
+  repo: vjurj/RecipeManager
+  app_id: Iv23ligbe25wYqlkkEuu
 collections:
   - name: "blog" # Used in routes, e.g., /admin/collections/blog
     label: "Blog" # Used in the UI
