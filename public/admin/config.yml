@@ -15,5 +15,5 @@ collections:
       - { label: "Featured Image", name: "heroImage", widget: "image" }
       - { label: "Body", name: "body", widget: "markdown" }
 
-media_folder: "public/images" # Location where files will be stored in the repo
+media_folder: "src/content/images" # Location where files will be stored in the repo
 public_folder: "/images" # The src attribute for uploaded media
