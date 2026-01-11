@@ -4,6 +4,7 @@ backend:
   auth_type: implicit
   repo: vjurj/RecipeManager
   app_id: Iv23ligbe25wYqlkkEuu
+site_url: https://vjurj.github.io/RecipeManager
 collections:
   - name: "blog" # Used in routes, e.g., /admin/collections/blog
     label: "Blog" # Used in the UI
