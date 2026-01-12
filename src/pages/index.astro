@@ -38,7 +38,7 @@ const posts = (await getCollection('blog'));
 		{
 			posts.map((post) => (
                     <div class="listItem">
-                    <a class="recipelink" href={`/RecipeManager/blog/${post.slug}/`}>
+                    <a class="recipelink" href={`/blog/${post.slug}/`}>
 					<img width="100%" height="280px" src={`${post.data.heroImage}`}/>
                     <div style="padding: 12px;">
 				    <h4>{post.data.title}</h4>

@@ -1,6 +1,6 @@
 ---
 title: "Caju prajit foarte fain "
-heroImage: /RecipeManager/images/caju_prajit.jpg
+heroImage: /images/caju_prajit.jpg
 ---
 Ai caju. Il prajesti
 
