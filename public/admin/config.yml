@@ -1,10 +1,9 @@
 backend:
   name: github
   branch: master # Branch to update (optional; defaults to master)
-  auth_type: implicit
   repo: vjurj/RecipeManager
-  app_id: Iv23ligbe25wYqlkkEuu
-site_url: https://vjurj.github.io/RecipeManager
+  auth_endpoint: /api/auth
+site_url: https://https://recipemanager.pages.dev
 collections:
   - name: "blog" # Used in routes, e.g., /admin/collections/blog
     label: "Blog" # Used in the UI
