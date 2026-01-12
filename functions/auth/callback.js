@@ -10,10 +10,13 @@ export async function onRequest(context) {
   const clientSecret = context.env.GITHUB_CLIENT_SECRET;
 
   const tokenRes = await fetch(
-    `https://github.com/login/oauth/access_token`,
+    "https://github.com/login/oauth/access_token",
     {
       method: "POST",
-      headers: { "Content-Type": "application/json", "Accept": "application/json" },
+      headers: {
+        "Content-Type": "application/json",
+        "Accept": "application/json"
+      },
       body: JSON.stringify({
         client_id: clientId,
         client_secret: clientSecret,
