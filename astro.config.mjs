@@ -3,5 +3,6 @@ import { defineConfig } from 'astro/config';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://recipemanager.pages.dev',
+    site: 'https://vjurj.github.io',
+    base: '/RecipeManager'
 })
