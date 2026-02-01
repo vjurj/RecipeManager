@@ -23,7 +23,7 @@ const { title, heroImage } = Astro.props;
             }
 			.hero-image img {
 				display: block;
-				max-width: 100%;
+				max-width: 360px;
 				width: auto; 
 				border-radius: 12px;
 				box-shadow: var(--box-shadow);
@@ -50,6 +50,6 @@ const { title, heroImage } = Astro.props;
 					<slot />
 				</div>
 			</div>
-		<Footer />
+		<!-- <Footer /> -->
 	</body>
 </html>
