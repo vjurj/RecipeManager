@@ -1,6 +1,6 @@
 ---
 title: Caju prajit foarte fain (e bun)
-heroImage: /images/caju_prajit.jpg
+heroImage: /RecipeManager/images/caju_prajit.jpg
 ---
 Ai caju. Il prajesti
 
