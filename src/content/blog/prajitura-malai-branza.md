@@ -4,7 +4,6 @@ heroImage: /RecipeManager/images/blog-placeholder-about.jpg
 ---
 
 ## Ingrediente:
-
 - 4 oua medii
 - 200g zahar
 - 400g smantana
