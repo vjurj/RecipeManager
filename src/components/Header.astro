@@ -2,26 +2,8 @@
 import { SITE_TITLE } from '../consts';
 ---
 
-<header>
-	<nav>
+<header class="topbar">
+	<nav class="topbar-inner">
 		<h3><a href="/RecipeManager">{SITE_TITLE}</a></h3>
 	</nav>
 </header>
-<style>
-	header {
-		margin: 0;
-		padding: 0 1em;
-		background: white;
-		box-shadow: 0 2px 8px rgba(var(--black), 5%);
-	}
-	nav {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-	}
-	nav a {
-		padding: 1em 0.5em;
-		color: var(--black);
-		text-decoration: none;
-	}
-</style>
