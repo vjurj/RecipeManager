@@ -44,7 +44,6 @@ header {
   background: #fff;
   border-bottom: 1px solid #e5e5e5;
   padding: 0.75rem 1rem;
-  /* position: sticky; */
   top: 0;
   z-index: 10;
 }
@@ -194,10 +193,57 @@ tr:hover td {
   transition: background 0.15s ease;
 }
 
+/* ------------------------------
+   Individual post
+--------------------------------*/
+.listcontainer {
+  margin-top: 24px;
+  display: grid;
+  gap: 24px;
+	margin-inline: auto;
+  max-width: 960px;
+  width: auto;
+}
+
+.hero-image img {
+	display: block;
+	max-width: 360px;
+	width: auto; 
+	border-radius: 12px;
+	box-shadow: var(--box-shadow);
+	margin-inline: auto;
+}
 
 /* ------------------------------
-   Footer text
+   Card Grid
 --------------------------------*/
-small {
-  color: #666;
-}
+      .post-grid {
+        max-width: 1100px;
+        margin: 2rem auto;
+        padding-inline: 1rem;
+        display: grid;
+        gap: 1.6rem;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      }
+
+      .post-card {
+        background: var(--color-white);
+        border: 1.5px solid var(--color-border);
+        border-radius: 8px;
+        overflow: hidden;
+        text-decoration: none;
+        color: inherit;
+        transition: transform 0.15s ease, box-shadow 0.15s ease;
+      }
+
+      .post-card:hover {
+        box-shadow: 0 8px 16px rgba(0,0,0,0.10);
+      }
+
+      .post-card-content {
+        padding-inline: 0.5rem;
+        padding-top: 0.5rem;
+      }
+
+      .post-card-title { display: -webkit-box; -webkit-line-clamp: 2; /* max 2 lines */ -webkit-box-orient: vertical; overflow: hidden; min-height: 3.2rem; }
+    

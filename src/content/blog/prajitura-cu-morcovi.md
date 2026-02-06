@@ -1,6 +1,8 @@
 ---
 title: Prajitura cu morcovi (carrot cake)
 heroImage: /RecipeManager/images/blog-placeholder-about.jpg
+tags: 
+- desert
 ---
 
 ## Ingrediente

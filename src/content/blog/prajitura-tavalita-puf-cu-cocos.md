@@ -1,6 +1,5 @@
 ---
-title: (Savori urbane) Prajitura tavalita (Puf) cu cocos
-heroImage: /RecipeManager/images/blog-placeholder-about.jpg
+title: (Savori urbane) Prajitura tavalita (Puf) cu cocos si mult cocos si mai mult cocossssss
 ---
 
 ## Ingrediente

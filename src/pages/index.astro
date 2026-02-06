@@ -3,50 +3,64 @@ import { getCollection } from "astro:content";
 import BaseHead from "../components/BaseHead.astro";
 import Header from "../components/Header.astro";
 
-const posts = (await getCollection('blog'));
+const posts = await getCollection('blog');
 ---
 
 <!doctype html>
 <html lang="en">
-    <head>
-        <style>
-             .listcontainer {
-                margin-top: 24px;
-                display: grid;
-                gap: 24px;
-                grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-				margin-inline: auto;
-                max-width: 1280px;
-                width: auto;
-            }
+  <BaseHead />
+  <Header />
 
-            .listItem {
-                width: 100%;
-                border-radius: 8px; 
-                box-shadow: var(--box-shadow) ;
-            } 
+  <body>
+    <div class="post-grid" id="postGrid">
+      {
+        posts.map((post) => (
+          <a 
+            href={`/RecipeManager/blog/${post.slug}/`} 
+            class="post-card"
+            data-title={post.data.title.toLowerCase()}
+          >
+            <div class="post-card-content">
+              <h3 class="post-card-title">{post.data.title}</h3>
+              <img src={post.data.heroImage} alt={post.data.title} />
+            </div>
+          </a>
+        ))
+      }
+    </div>
+    <div id="no-results" style="display:none; text-align:center; margin-top:2rem; color:var(--color-muted);"> Nu s-au gasit retete </div>
 
-			a {
-				text-decoration: none;
-			}
-        </style>
-    </head>
-	<BaseHead/>
-	<Header/>
-	<body>
-        <div class="listcontainer">
-		{
-			posts.map((post) => (
-                    <div class="listItem">
-                    <a class="recipelink" href={`/RecipeManager/blog/${post.slug}/`}>
-					<img width="100%" height="280px" src={`${post.data.heroImage}`}/>
-                    <div style="padding: 12px;">
-				    <h4>{post.data.title}</h4>
-					</a> 
-                    </div>
-                    </div>
-			))
+  <script>
+  const searchInput = document.getElementById("search");
+  const cards = document.querySelectorAll(".post-card");
+  const noResults = document.getElementById("no-results");
+
+  if (searchInput instanceof HTMLInputElement && noResults instanceof HTMLElement) {
+    searchInput.addEventListener("input", (event) => {
+      const target = event.target;
+      if (!(target instanceof HTMLInputElement)) return;
+
+      const query = target.value.toLowerCase();
+      let visibleCount = 0;
+
+      cards.forEach((card) => {
+        if (!(card instanceof HTMLElement)) return;
+
+        const title = card.dataset.title ?? "";
+
+        if (title.includes(query)) {
+          card.style.display = "block";
+          visibleCount++;
+        } else {
+          card.style.display = "none";
         }
-        </div>
-	</body>
+      });
+
+      noResults.style.display = visibleCount === 0 ? "block" : "none";
+    });
+  }
+</script>
+
+
+  </body>
 </html>

@@ -5,5 +5,41 @@ import { SITE_TITLE } from '../consts';
 <header class="topbar">
 	<nav class="topbar-inner">
 		<h3><a href="/RecipeManager">{SITE_TITLE}</a></h3>
+		<input 
+      id="search"
+      type="text"
+      placeholder="Cauta reteta..."
+      class="searchbar"
+    />
 	</nav>
 </header>
+
+<style>
+  .topbar {
+    width: 100%;
+    background: #fff;
+    border-bottom: 1px solid #e5e5e5;
+    padding: 0.75rem 1rem;
+  }
+
+  .topbar-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .searchbar {
+    padding: 0.4rem 0.6rem;
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    font-size: 0.9rem;
+    width: 180px;
+  }
+
+  .searchbar:focus {
+    outline: none;
+    border-color: var(--color-link);
+  }
+</style>

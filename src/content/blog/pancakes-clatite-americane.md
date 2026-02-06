@@ -1,6 +1,9 @@
 ---
 title: Pancakes (clatite americane)
 heroImage: /RecipeManager/images/blog-placeholder-about.jpg
+tags:
+- desert
+- rapid
 ---
 
 ## Ingrediente:

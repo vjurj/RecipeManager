@@ -5,7 +5,8 @@ const blog = defineCollection({
 	// Type-check frontmatter using a schema
 	schema: z.object({
 		title: z.string(),
-		heroImage: z.string().optional(),
+		heroImage: z.string().optional().default("/RecipeManager/images/blog-placeholder-about.jpg"),
+		tags: z.array(z.string()).optional().default([]),
 	}),
 });
 

@@ -1,6 +1,7 @@
 ---
 title: Prajitura cu malai si branza
-heroImage: /RecipeManager/images/blog-placeholder-about.jpg
+tags:
+- desert
 ---
 
 ## Ingrediente:
