@@ -1,0 +1,12 @@
+---
+title: Reteta mea
+---
+
+## Ingrediente:
+- ceva
+- 200g altceva
+- 400g inca o chestie
+
+## Instructiuni
+
+Aici sunt niste instructiuni
