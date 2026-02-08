@@ -28,7 +28,7 @@ const processedPosts = (posts.docs ?? []).map((post: { id: number, title: string
       {
         processedPosts.map((post: { id: number, title: string; content: unknown, image: string }) => (
        <a 
-            href={`/RecipeManager/rich/${post.id}/`} 
+            href={`/RecipeManager/indexrichcopy/${post.id}/`} 
             class="post-card"
             data-title={post.title.toLowerCase()}
           >

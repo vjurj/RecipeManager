@@ -27,23 +27,6 @@ const isDev = import.meta.env.DEV;
 
 {isDev && (
 <script>
-  async function checkChanges() {
-    try {
-      const res = await fetch("/api/hasChanges");
-      const data = await res.json();
-
-      const btn = document.getElementById("push-btn");
-      btn.style.display = data.hasChanges ? "inline-block" : "none";
-    } catch (err) {
-      console.error("Failed to check git changes", err);
-    }
-  }
-
-  // Run on load
-  checkChanges();
-
-  // Optional: re-check every 5 seconds
-  {/* setInterval(checkChanges, 5000); */}
 
   // Button action
   document.getElementById("push-btn").addEventListener("click", async () => {

@@ -1,0 +1,26 @@
+---
+import { convertLexicalToHTML } from '@payloadcms/richtext-lexical/html';
+import BlogPost from '../../layouts/BlogPost.astro';
+import recipes from "../../../cms-data/recipes.json";
+
+export async function getStaticPaths() {
+
+   return recipes.map((doc) => ({ params: { id: doc.id.toString() } }));
+}
+
+const { id } = Astro.params;
+
+const post = recipes.find((r) => r.id.toString() === id); if (!post) { throw new Error(`Recipe with id ${id} not found`); }
+
+const html = convertLexicalToHTML({data: post.content});
+
+const heroImage = post.image?.url 
+        ? post.image.url.replace("/api/media/file/", "/RecipeManager/media/") 
+        : "/RecipeManager/images/blog-placeholder-about.jpg" 
+
+const tags = post.tags ?? [];
+console.log(heroImage);---
+
+<BlogPost title={post.title} heroImage={heroImage} tags={tags}>
+  <div set:html={html}></div>
+</BlogPost>
