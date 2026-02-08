@@ -5,6 +5,9 @@ import { SITE_TITLE } from '../consts';
 <header class="topbar">
 	<nav class="topbar-inner">
 		<h3><a href="/RecipeManager">{SITE_TITLE}</a></h3>
+    <button id="push-btn" style="display:none;">
+  Commit & Push
+</button>
 		<input 
       id="search"
       type="text"
@@ -13,6 +16,33 @@ import { SITE_TITLE } from '../consts';
     />
 	</nav>
 </header>
+
+<script>
+  async function checkChanges() {
+    const res = await fetch("/api/hasChanges");
+    const data = await res.json();
+
+    if (data.hasChanges) {
+      document.getElementById("push-btn").style.display = "inline-block";
+    } else {
+      document.getElementById("push-btn").style.display = "none";
+    }
+  }
+
+  // Run on page load
+  checkChanges();
+
+  // Optional: re-check every 5 seconds
+  setInterval(checkChanges, 5000);
+
+  // Button action
+  document.getElementById("push-btn").addEventListener("click", async () => {
+    const res = await fetch("/api/push");
+    const text = await res.text();
+    alert(text);
+    checkChanges(); // refresh button visibility
+  });
+</script>
 
 <style>
   .topbar {
