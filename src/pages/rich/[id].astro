@@ -3,6 +3,9 @@ import { convertLexicalToHTML } from '@payloadcms/richtext-lexical/html';
 import BlogPost from '../../layouts/BlogPost.astro';
 
 export async function getStaticPaths() {
+
+  if (!import.meta.env.DEV) return []; // prevent build crash
+  
   const res = await fetch('http://localhost:3000/api/recipesrich');
   const { docs } = await res.json();
 
