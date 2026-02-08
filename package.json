@@ -10,6 +10,9 @@
   },
   "dependencies": {
     "@astrojs/mdx": "^4.3.13",
-    "astro": "^5.16.6"
+    "@payloadcms/richtext-lexical": "^3.75.0",
+    "astro": "^5.16.6",
+    "marked": "^17.0.1",
+    "payload": "^3.75.0"
   }
 }

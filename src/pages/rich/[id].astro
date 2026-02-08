@@ -1,0 +1,26 @@
+---
+import { convertLexicalToHTML } from '@payloadcms/richtext-lexical/html';
+import BlogPost from '../../layouts/BlogPost.astro';
+
+export async function getStaticPaths() {
+  const res = await fetch('http://localhost:3000/api/recipesrich');
+  const { docs } = await res.json();
+
+  return docs.map(doc => ({
+    params: { id: doc.id.toString() }
+  }));
+}
+
+const { id } = Astro.params;
+
+const res = await fetch(`http://localhost:3000/api/recipesrich/${id}`);
+const post = await res.json();
+
+const html = convertLexicalToHTML({data: post.content});
+const heroImage = post.image != undefined ? "http://localhost:3000" + post.image.url : "/RecipeManager/images/blog-placeholder-about.jpg";
+const tags = post.tags ?? [];
+console.log(heroImage);---
+
+<BlogPost title={post.title} heroImage={heroImage} tags={tags}>
+  <div set:html={html}></div>
+</BlogPost>

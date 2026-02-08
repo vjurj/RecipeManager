@@ -1,31 +1,39 @@
 ---
-import { getCollection } from "astro:content";
 import BaseHead from "../components/BaseHead.astro";
 import Header from "../components/Header.astro";
 
-const posts = await getCollection('blog');
+const res = await fetch("http://localhost:3000/api/recipesrich");
+const posts = await res.json();
+
+const processedPosts = posts.docs.map((post: { id: number, title: string; content: unknown, image: string }) => {
+  return {
+    id: post.id,
+    title: post.title,
+    content: post.content,
+    image: post.image?.url == undefined ? "/RecipeManager/images/blog-placeholder-about.jpg" : "http://localhost:3000" + post.image.url
+  }
+});
 ---
 
 <!doctype html>
 <html lang="en">
-  <BaseHead />
+ <BaseHead />
   <Header />
 
-  <body>
-    <div class="post-grid" id="postGrid">
+ <div class="post-grid" id="postGrid">
       {
-        posts.map((post) => (
-          <a 
-            href={`/RecipeManager/blog/${post.slug}/`} 
+        processedPosts.map((post: { id: number, title: string; content: unknown, image: string }) => (
+       <a 
+            href={`/RecipeManager/rich/${post.id}/`} 
             class="post-card"
-            data-title={post.data.title.toLowerCase()}
+            data-title={post.title.toLowerCase()}
           >
             <div class="post-card-content">
-              <h3 class="post-card-title">{post.data.title}</h3>
-              <img src={post.data.heroImage} alt={post.data.title} />
+              <h3 class="post-card-title">{post.title}</h3>
+              <img src={post.image} alt="image not found" />
             </div>
           </a>
-        ))
+      ))
       }
     </div>
     <div id="no-results" style="display:none; text-align:center; margin-top:2rem; color:var(--color-muted);"> Nu s-au gasit retete </div>
