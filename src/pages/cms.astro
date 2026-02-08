@@ -5,13 +5,11 @@ import Header from "../components/Header.astro";
 let posts = [];
 
 if (import.meta.env.DEV) {
-const res = await fetch("http://localhost:3000/api/recipesrich");
-const posts = await res.json();
-} else {
-   posts = [];
+  const res = await fetch("http://localhost:3000/api/recipesrich");
+  posts = await res.json();
 }
 
-const processedPosts = posts.docs.map((post: { id: number, title: string; content: unknown, image: string }) => {
+const processedPosts = (posts.docs ?? []).map((post: { id: number, title: string; content: unknown, image: string }) => {
   return {
     id: post.id,
     title: post.title,
