@@ -6,7 +6,8 @@
     "dev": "astro dev --host",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "export-cms": "payload run scripts/export-cms-data.ts"
   },
   "dependencies": {
     "@astrojs/mdx": "^4.3.13",

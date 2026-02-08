@@ -1,0 +1,77 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+
+let posts = [];
+
+ const recipes = await import("../../cms-data/recipes.json");
+  posts = { docs: recipes.default }; 
+
+const processedPosts = (posts.docs ?? []).map((post: { id: number, title: string; content: unknown, image: string }) => {
+  return {
+    id: post.id,
+    title: post.title,
+    content: post.content,
+    image: post.image?.url 
+        ? post.image.url.replace("/api/media/file/", "/RecipeManager/media/") 
+        : "/RecipeManager/images/blog-placeholder-about.jpg" 
+  }
+});
+---
+
+<!doctype html>
+<html lang="en">
+ <BaseHead />
+  <Header />
+
+ <div class="post-grid" id="postGrid">
+      {
+        processedPosts.map((post: { id: number, title: string; content: unknown, image: string }) => (
+       <a 
+            href={`/RecipeManager/rich/${post.id}/`} 
+            class="post-card"
+            data-title={post.title.toLowerCase()}
+          >
+            <div class="post-card-content">
+              <h3 class="post-card-title">{post.title}</h3>
+              <img src={post.image} alt="image not found" />
+            </div>
+          </a>
+      ))
+      }
+    </div>
+    <div id="no-results" style="display:none; text-align:center; margin-top:2rem; color:var(--color-muted);"> Nu s-au gasit retete </div>
+
+  <script>
+  const searchInput = document.getElementById("search");
+  const cards = document.querySelectorAll(".post-card");
+  const noResults = document.getElementById("no-results");
+
+  if (searchInput instanceof HTMLInputElement && noResults instanceof HTMLElement) {
+    searchInput.addEventListener("input", (event) => {
+      const target = event.target;
+      if (!(target instanceof HTMLInputElement)) return;
+
+      const query = target.value.toLowerCase();
+      let visibleCount = 0;
+
+      cards.forEach((card) => {
+        if (!(card instanceof HTMLElement)) return;
+
+        const title = card.dataset.title ?? "";
+
+        if (title.includes(query)) {
+          card.style.display = "block";
+          visibleCount++;
+        } else {
+          card.style.display = "none";
+        }
+      });
+
+      noResults.style.display = visibleCount === 0 ? "block" : "none";
+    });
+  }
+</script>
+
+</body>
+</html>

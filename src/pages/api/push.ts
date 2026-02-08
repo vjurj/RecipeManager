@@ -2,7 +2,23 @@ import { exec } from "child_process";
 import path from "path";
 
 export async function GET() {
-  return new Promise((resolve) => {
+  return new Promise(async (resolve) => {
+
+     // 1. Run export script 
+     exec("npm run export-cms", async (error) => { 
+        if (error) { 
+            resolve(new Response("Export failed: " + error.message, { status: 500 })); 
+            return; 
+        }});
+
+    const hasChangesRes = await fetch("http://localhost:4321/api/hasChanges"); 
+    const { hasChanges } = await hasChangesRes.json();
+
+    if (!hasChanges) { 
+        resolve(new Response("No changes to commit", { status: 200 })); 
+        return; 
+    }
+
     const scriptPath = path.join(process.cwd(), "scripts", "push.cmd");
 
     exec(`"${scriptPath}"`, (error, stdout, stderr) => {

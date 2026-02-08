@@ -1,5 +1,6 @@
 ---
 import { SITE_TITLE } from '../consts';
+const isDev = import.meta.env.DEV;
 ---
 
 <header class="topbar">
@@ -14,14 +15,17 @@ import { SITE_TITLE } from '../consts';
         class="searchbar"
       />
 
-      <!-- Hidden by default -->
-      <button id="push-btn" class="git-btn" style="display:none;">
-        Push changes
-      </button>
+       {isDev && (
+        <!-- Hidden by default -->
+        <button id="push-btn" class="git-btn">
+          Push changes
+        </button>
+       )}
     </div>
   </nav>
 </header>
 
+{isDev && (
 <script>
   async function checkChanges() {
     try {
@@ -39,7 +43,7 @@ import { SITE_TITLE } from '../consts';
   checkChanges();
 
   // Optional: re-check every 5 seconds
-  setInterval(checkChanges, 5000);
+  {/* setInterval(checkChanges, 5000); */}
 
   // Button action
   document.getElementById("push-btn").addEventListener("click", async () => {
@@ -49,6 +53,7 @@ import { SITE_TITLE } from '../consts';
     checkChanges(); // refresh visibility
   });
 </script>
+)}
 
 <style>
   .topbar {

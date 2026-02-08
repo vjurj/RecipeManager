@@ -2,7 +2,7 @@ import { exec } from "child_process";
 
 export async function GET() {
   return new Promise((resolve) => {
-    exec("git status --porcelain", (error, stdout) => {
+    exec("git status --porcelain public/media cms-data", (error, stdout) => {
       if (error) {
         resolve(
           new Response(JSON.stringify({ error: error.message }), {
