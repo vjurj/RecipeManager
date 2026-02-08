@@ -2,8 +2,14 @@
 import BaseHead from "../components/BaseHead.astro";
 import Header from "../components/Header.astro";
 
+let posts = [];
+
+if (import.meta.env.DEV) {
 const res = await fetch("http://localhost:3000/api/recipesrich");
 const posts = await res.json();
+} else {
+   posts = [];
+}
 
 const processedPosts = posts.docs.map((post: { id: number, title: string; content: unknown, image: string }) => {
   return {
