@@ -1,6 +1,12 @@
 import { exec } from "child_process";
 
 export async function GET() {
+
+    if (import.meta.env.PROD) { 
+        return new Response(JSON.stringify({ hasChanges: false }), 
+        { status: 200, headers: { "Content-Type": "application/json" }, }); 
+    }
+
   return new Promise((resolve) => {
     exec("git status --porcelain public/media cms-data", (error, stdout) => {
       if (error) {

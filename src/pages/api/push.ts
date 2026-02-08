@@ -4,6 +4,9 @@ import path from "path";
 export async function GET() {
   return new Promise(async (resolve) => {
 
+     // Prevent this from running in production builds 
+     if (import.meta.env.PROD) { return new Response("Not available in production", { status: 404 }); }
+     
      // 1. Run export script 
      exec("npm run export-cms", async (error) => { 
         if (error) { 
