@@ -3,33 +3,39 @@ import { SITE_TITLE } from '../consts';
 ---
 
 <header class="topbar">
-	<nav class="topbar-inner">
-		<h3><a href="/RecipeManager">{SITE_TITLE}</a></h3>
-    <button id="push-btn" style="display:none;">
-  Commit & Push
-</button>
-		<input 
-      id="search"
-      type="text"
-      placeholder="Cauta reteta..."
-      class="searchbar"
-    />
-	</nav>
+  <nav class="topbar-inner">
+    <h3><a href="/RecipeManager">{SITE_TITLE}</a></h3>
+
+    <div class="right-side">
+      <input 
+        id="search"
+        type="text"
+        placeholder="Cauta reteta..."
+        class="searchbar"
+      />
+
+      <!-- Hidden by default -->
+      <button id="push-btn" class="git-btn" style="display:none;">
+        Push changes
+      </button>
+    </div>
+  </nav>
 </header>
 
 <script>
   async function checkChanges() {
-    const res = await fetch("/api/hasChanges");
-    const data = await res.json();
+    try {
+      const res = await fetch("/api/hasChanges");
+      const data = await res.json();
 
-    if (data.hasChanges) {
-      document.getElementById("push-btn").style.display = "inline-block";
-    } else {
-      document.getElementById("push-btn").style.display = "none";
+      const btn = document.getElementById("push-btn");
+      btn.style.display = data.hasChanges ? "inline-block" : "none";
+    } catch (err) {
+      console.error("Failed to check git changes", err);
     }
   }
 
-  // Run on page load
+  // Run on load
   checkChanges();
 
   // Optional: re-check every 5 seconds
@@ -40,7 +46,7 @@ import { SITE_TITLE } from '../consts';
     const res = await fetch("/api/push");
     const text = await res.text();
     alert(text);
-    checkChanges(); // refresh button visibility
+    checkChanges(); // refresh visibility
   });
 </script>
 
@@ -60,6 +66,12 @@ import { SITE_TITLE } from '../consts';
     align-items: center;
   }
 
+  .right-side {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
   .searchbar {
     padding: 0.4rem 0.6rem;
     border: 1px solid var(--color-border);
@@ -71,5 +83,19 @@ import { SITE_TITLE } from '../consts';
   .searchbar:focus {
     outline: none;
     border-color: var(--color-link);
+  }
+
+  .git-btn {
+    padding: 0.4rem 0.6rem;
+    background: #0078d4;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.85rem;
+  }
+
+  .git-btn:hover {
+    background: #005fa3;
   }
 </style>
