@@ -1,0 +1,689 @@
+[
+  {
+    "id": 4,
+    "title": "Lasagna",
+    "content": {
+      "root": {
+        "children": [
+          {
+            "children": [
+              {
+                "detail": 0,
+                "format": 0,
+                "mode": "normal",
+                "style": "",
+                "text": "Iei paste le fierbi si pui carne si iese foarte bun",
+                "type": "text",
+                "version": 1
+              }
+            ],
+            "direction": null,
+            "format": "",
+            "indent": 0,
+            "type": "paragraph",
+            "version": 1,
+            "textFormat": 0,
+            "textStyle": ""
+          }
+        ],
+        "direction": null,
+        "format": "",
+        "indent": 0,
+        "type": "root",
+        "version": 1
+      }
+    },
+    "image": {
+      "id": 1,
+      "alt": "crumble",
+      "updatedAt": "2026-02-07T17:18:36.953Z",
+      "createdAt": "2026-02-07T17:18:36.952Z",
+      "url": "/api/media/file/new-york-crumb-cake-7-scaled.jpg",
+      "thumbnailURL": null,
+      "filename": "new-york-crumb-cake-7-scaled.jpg",
+      "mimeType": "image/jpeg",
+      "filesize": 58328,
+      "width": 1200,
+      "height": 800,
+      "focalX": 50,
+      "focalY": 50
+    },
+    "updatedAt": "2026-02-08T17:16:51.014Z",
+    "createdAt": "2026-02-07T17:00:04.464Z"
+  },
+  {
+    "id": 3,
+    "title": "O noua reteta si mai faina",
+    "content": {
+      "root": {
+        "children": [
+          {
+            "children": [
+              {
+                "detail": 0,
+                "format": 0,
+                "mode": "normal",
+                "style": "",
+                "text": "Ingrediente:",
+                "type": "text",
+                "version": 1
+              }
+            ],
+            "direction": null,
+            "format": "",
+            "indent": 0,
+            "type": "heading",
+            "version": 1,
+            "tag": "h1"
+          },
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "detail": 0,
+                    "format": 0,
+                    "mode": "normal",
+                    "style": "",
+                    "text": "paine",
+                    "type": "text",
+                    "version": 1
+                  }
+                ],
+                "direction": null,
+                "format": "",
+                "indent": 0,
+                "type": "listitem",
+                "version": 1,
+                "value": 1
+              },
+              {
+                "children": [
+                  {
+                    "detail": 0,
+                    "format": 0,
+                    "mode": "normal",
+                    "style": "",
+                    "text": "apa",
+                    "type": "text",
+                    "version": 1
+                  }
+                ],
+                "direction": null,
+                "format": "",
+                "indent": 0,
+                "type": "listitem",
+                "version": 1,
+                "value": 2
+              },
+              {
+                "children": [
+                  {
+                    "detail": 0,
+                    "format": 0,
+                    "mode": "normal",
+                    "style": "",
+                    "text": "sare",
+                    "type": "text",
+                    "version": 1
+                  }
+                ],
+                "direction": null,
+                "format": "",
+                "indent": 0,
+                "type": "listitem",
+                "version": 1,
+                "value": 3
+              }
+            ],
+            "direction": null,
+            "format": "",
+            "indent": 0,
+            "type": "list",
+            "version": 1,
+            "listType": "bullet",
+            "start": 1,
+            "tag": "ul"
+          }
+        ],
+        "direction": null,
+        "format": "",
+        "indent": 0,
+        "type": "root",
+        "version": 1
+      }
+    },
+    "image": {
+      "id": 2,
+      "alt": null,
+      "updatedAt": "2026-02-07T17:32:43.649Z",
+      "createdAt": "2026-02-07T17:32:43.649Z",
+      "url": "/api/media/file/image.jpg",
+      "thumbnailURL": null,
+      "filename": "image.jpg",
+      "mimeType": "image/jpeg",
+      "filesize": 1281570,
+      "width": 4032,
+      "height": 3024,
+      "focalX": 50,
+      "focalY": 50
+    },
+    "updatedAt": "2026-02-07T17:32:46.502Z",
+    "createdAt": "2026-02-07T16:56:22.708Z"
+  },
+  {
+    "id": 2,
+    "title": "Prajitura doi",
+    "content": {
+      "root": {
+        "children": [
+          {
+            "children": [
+              {
+                "detail": 0,
+                "format": 0,
+                "mode": "normal",
+                "style": "",
+                "text": "Prajitura doi e mai buna ca prajitura unu",
+                "type": "text",
+                "version": 1
+              }
+            ],
+            "direction": null,
+            "format": "",
+            "indent": 0,
+            "type": "paragraph",
+            "version": 1,
+            "textFormat": 0,
+            "textStyle": ""
+          }
+        ],
+        "direction": null,
+        "format": "",
+        "indent": 0,
+        "type": "root",
+        "version": 1
+      }
+    },
+    "image": null,
+    "updatedAt": "2026-02-07T16:36:40.990Z",
+    "createdAt": "2026-02-07T16:36:40.990Z"
+  },
+  {
+    "id": 1,
+    "title": "Prajitura cu malai si branza",
+    "content": {
+      "root": {
+        "children": [
+          {
+            "children": [
+              {
+                "detail": 0,
+                "format": 0,
+                "mode": "normal",
+                "style": "",
+                "text": "Ingrediente:",
+                "type": "text",
+                "version": 1
+              }
+            ],
+            "direction": null,
+            "format": "",
+            "indent": 0,
+            "type": "heading",
+            "version": 1,
+            "tag": "h2"
+          },
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "detail": 0,
+                    "format": 0,
+                    "mode": "normal",
+                    "style": "",
+                    "text": "4 oua medii",
+                    "type": "text",
+                    "version": 1
+                  }
+                ],
+                "direction": null,
+                "format": "",
+                "indent": 0,
+                "type": "listitem",
+                "version": 1,
+                "value": 1
+              },
+              {
+                "children": [
+                  {
+                    "detail": 0,
+                    "format": 0,
+                    "mode": "normal",
+                    "style": "",
+                    "text": "200g zahar",
+                    "type": "text",
+                    "version": 1
+                  }
+                ],
+                "direction": null,
+                "format": "",
+                "indent": 0,
+                "type": "listitem",
+                "version": 1,
+                "value": 2
+              },
+              {
+                "children": [
+                  {
+                    "detail": 0,
+                    "format": 0,
+                    "mode": "normal",
+                    "style": "",
+                    "text": "400g smantana",
+                    "type": "text",
+                    "version": 1
+                  }
+                ],
+                "direction": null,
+                "format": "",
+                "indent": 0,
+                "type": "listitem",
+                "version": 1,
+                "value": 3
+              },
+              {
+                "children": [
+                  {
+                    "detail": 0,
+                    "format": 0,
+                    "mode": "normal",
+                    "style": "",
+                    "text": "350g branza proaspata de vaci",
+                    "type": "text",
+                    "version": 1
+                  }
+                ],
+                "direction": null,
+                "format": "",
+                "indent": 0,
+                "type": "listitem",
+                "version": 1,
+                "value": 4
+              },
+              {
+                "children": [
+                  {
+                    "detail": 0,
+                    "format": 0,
+                    "mode": "normal",
+                    "style": "",
+                    "text": "150g telemea (optional)",
+                    "type": "text",
+                    "version": 1
+                  }
+                ],
+                "direction": null,
+                "format": "",
+                "indent": 0,
+                "type": "listitem",
+                "version": 1,
+                "value": 5
+              },
+              {
+                "children": [
+                  {
+                    "detail": 0,
+                    "format": 0,
+                    "mode": "normal",
+                    "style": "",
+                    "text": "100g unt (65%)",
+                    "type": "text",
+                    "version": 1
+                  }
+                ],
+                "direction": null,
+                "format": "",
+                "indent": 0,
+                "type": "listitem",
+                "version": 1,
+                "value": 6
+              },
+              {
+                "children": [
+                  {
+                    "detail": 0,
+                    "format": 0,
+                    "mode": "normal",
+                    "style": "",
+                    "text": "250g malai",
+                    "type": "text",
+                    "version": 1
+                  }
+                ],
+                "direction": null,
+                "format": "",
+                "indent": 0,
+                "type": "listitem",
+                "version": 1,
+                "value": 7
+              },
+              {
+                "children": [
+                  {
+                    "detail": 0,
+                    "format": 0,
+                    "mode": "normal",
+                    "style": "",
+                    "text": "150g faina",
+                    "type": "text",
+                    "version": 1
+                  }
+                ],
+                "direction": null,
+                "format": "",
+                "indent": 0,
+                "type": "listitem",
+                "version": 1,
+                "value": 8
+              },
+              {
+                "children": [
+                  {
+                    "detail": 0,
+                    "format": 0,
+                    "mode": "normal",
+                    "style": "",
+                    "text": "1 plic praf de copt",
+                    "type": "text",
+                    "version": 1
+                  }
+                ],
+                "direction": null,
+                "format": "",
+                "indent": 0,
+                "type": "listitem",
+                "version": 1,
+                "value": 9
+              },
+              {
+                "children": [
+                  {
+                    "detail": 0,
+                    "format": 0,
+                    "mode": "normal",
+                    "style": "",
+                    "text": "2 plicuri zahar vanilat",
+                    "type": "text",
+                    "version": 1
+                  }
+                ],
+                "direction": null,
+                "format": "",
+                "indent": 0,
+                "type": "listitem",
+                "version": 1,
+                "value": 10
+              },
+              {
+                "children": [
+                  {
+                    "detail": 0,
+                    "format": 0,
+                    "mode": "normal",
+                    "style": "",
+                    "text": "2 fiole esenta de vanilie",
+                    "type": "text",
+                    "version": 1
+                  }
+                ],
+                "direction": null,
+                "format": "",
+                "indent": 0,
+                "type": "listitem",
+                "version": 1,
+                "value": 11
+              }
+            ],
+            "direction": null,
+            "format": "",
+            "indent": 0,
+            "type": "list",
+            "version": 1,
+            "listType": "bullet",
+            "start": 1,
+            "tag": "ul"
+          },
+          {
+            "children": [
+              {
+                "detail": 0,
+                "format": 0,
+                "mode": "normal",
+                "style": "",
+                "text": "Instructiuni",
+                "type": "text",
+                "version": 1
+              }
+            ],
+            "direction": null,
+            "format": "",
+            "indent": 0,
+            "type": "heading",
+            "version": 1,
+            "tag": "h2"
+          },
+          {
+            "children": [
+              {
+                "detail": 0,
+                "format": 0,
+                "mode": "normal",
+                "style": "",
+                "text": "Amestecam branza proaspata cu telemeaua razuita sau sfaramata cu furculita",
+                "type": "text",
+                "version": 1
+              }
+            ],
+            "direction": null,
+            "format": "",
+            "indent": 0,
+            "type": "paragraph",
+            "version": 1,
+            "textFormat": 0,
+            "textStyle": ""
+          },
+          {
+            "children": [
+              {
+                "detail": 0,
+                "format": 0,
+                "mode": "normal",
+                "style": "",
+                "text": "Faina o cernem impreuna cu praful de copt",
+                "type": "text",
+                "version": 1
+              }
+            ],
+            "direction": null,
+            "format": "",
+            "indent": 0,
+            "type": "paragraph",
+            "version": 1,
+            "textFormat": 0,
+            "textStyle": ""
+          },
+          {
+            "children": [
+              {
+                "detail": 0,
+                "format": 0,
+                "mode": "normal",
+                "style": "",
+                "text": "Separam ouale (albusurile de galbenusuri)",
+                "type": "text",
+                "version": 1
+              }
+            ],
+            "direction": null,
+            "format": "",
+            "indent": 0,
+            "type": "paragraph",
+            "version": 1,
+            "textFormat": 0,
+            "textStyle": ""
+          },
+          {
+            "children": [
+              {
+                "detail": 0,
+                "format": 0,
+                "mode": "normal",
+                "style": "",
+                "text": "Albusurile le lasam deoparte sa ajunga la temperatura camerei si adaugam un praf de sare",
+                "type": "text",
+                "version": 1
+              }
+            ],
+            "direction": null,
+            "format": "",
+            "indent": 0,
+            "type": "paragraph",
+            "version": 1,
+            "textFormat": 0,
+            "textStyle": ""
+          },
+          {
+            "children": [
+              {
+                "detail": 0,
+                "format": 0,
+                "mode": "normal",
+                "style": "",
+                "text": "Mixam untul moale cu galbenusurile si jumatate din jumatate din cantitatea de zahar transformat in pudra, pana se omogenizeaza",
+                "type": "text",
+                "version": 1
+              }
+            ],
+            "direction": null,
+            "format": "",
+            "indent": 0,
+            "type": "paragraph",
+            "version": 1,
+            "textFormat": 0,
+            "textStyle": ""
+          },
+          {
+            "children": [
+              {
+                "detail": 0,
+                "format": 0,
+                "mode": "normal",
+                "style": "",
+                "text": "Adaugam smantana, apoi malaiul, faina, esenta si lasam compozitia sa se odihneasca 30 de min, pentru a se hidrata malaiul",
+                "type": "text",
+                "version": 1
+              }
+            ],
+            "direction": null,
+            "format": "",
+            "indent": 0,
+            "type": "paragraph",
+            "version": 1,
+            "textFormat": 0,
+            "textStyle": ""
+          },
+          {
+            "children": [
+              {
+                "detail": 0,
+                "format": 0,
+                "mode": "normal",
+                "style": "",
+                "text": "Adaugam apoi branza",
+                "type": "text",
+                "version": 1
+              }
+            ],
+            "direction": null,
+            "format": "",
+            "indent": 0,
+            "type": "paragraph",
+            "version": 1,
+            "textFormat": 0,
+            "textStyle": ""
+          },
+          {
+            "children": [
+              {
+                "detail": 0,
+                "format": 0,
+                "mode": "normal",
+                "style": "",
+                "text": "Mixam albusurile spuma cu restul de zahar adaugat treptat + zaharul vanilat",
+                "type": "text",
+                "version": 1
+              }
+            ],
+            "direction": null,
+            "format": "",
+            "indent": 0,
+            "type": "paragraph",
+            "version": 1,
+            "textFormat": 0,
+            "textStyle": ""
+          },
+          {
+            "children": [
+              {
+                "detail": 0,
+                "format": 0,
+                "mode": "normal",
+                "style": "",
+                "text": "Incorporam spuma peste prima compozitie",
+                "type": "text",
+                "version": 1
+              }
+            ],
+            "direction": null,
+            "format": "",
+            "indent": 0,
+            "type": "paragraph",
+            "version": 1,
+            "textFormat": 0,
+            "textStyle": ""
+          },
+          {
+            "children": [
+              {
+                "detail": 0,
+                "format": 0,
+                "mode": "normal",
+                "style": "",
+                "text": "Tava se pune in cuptorul preincalzit la 180 Celsius pentru 35-40 minute",
+                "type": "text",
+                "version": 1
+              }
+            ],
+            "direction": null,
+            "format": "",
+            "indent": 0,
+            "type": "paragraph",
+            "version": 1,
+            "textFormat": 0,
+            "textStyle": ""
+          }
+        ],
+        "direction": null,
+        "format": "",
+        "indent": 0,
+        "type": "root",
+        "version": 1
+      }
+    },
+    "image": null,
+    "updatedAt": "2026-02-07T16:22:49.801Z",
+    "createdAt": "2026-02-07T15:36:19.958Z"
+  }
+]
