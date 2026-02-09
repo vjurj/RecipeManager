@@ -24,6 +24,26 @@
             "version": 1,
             "textFormat": 0,
             "textStyle": ""
+          },
+          {
+            "children": [
+              {
+                "detail": 0,
+                "format": 0,
+                "mode": "normal",
+                "style": "",
+                "text": "Merita sa o gatesti",
+                "type": "text",
+                "version": 1
+              }
+            ],
+            "direction": null,
+            "format": "",
+            "indent": 0,
+            "type": "paragraph",
+            "version": 1,
+            "textFormat": 0,
+            "textStyle": ""
           }
         ],
         "direction": null,
@@ -34,7 +54,7 @@
       }
     },
     "image": null,
-    "updatedAt": "2026-02-09T19:16:26.505Z",
+    "updatedAt": "2026-02-09T19:27:54.536Z",
     "createdAt": "2026-02-08T19:08:41.043Z"
   },
   {
