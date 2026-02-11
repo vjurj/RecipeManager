@@ -43,8 +43,22 @@
         "version": 1
       }
     },
-    "image": null,
-    "updatedAt": "2026-02-11T18:45:28.850Z",
+    "image": {
+      "id": 3,
+      "alt": null,
+      "updatedAt": "2026-02-11T18:48:03.758Z",
+      "createdAt": "2026-02-11T18:48:03.758Z",
+      "url": "/api/media/file/image-1.jpg",
+      "thumbnailURL": null,
+      "filename": "image-1.jpg",
+      "mimeType": "image/jpeg",
+      "filesize": 2810056,
+      "width": 4032,
+      "height": 3024,
+      "focalX": 50,
+      "focalY": 50
+    },
+    "updatedAt": "2026-02-11T18:48:14.860Z",
     "createdAt": "2026-02-09T19:32:19.114Z"
   },
   {
