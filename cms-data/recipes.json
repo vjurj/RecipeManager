@@ -1,5 +1,43 @@
 [
   {
+    "id": 8,
+    "title": "Reteta noua",
+    "content": {
+      "root": {
+        "children": [
+          {
+            "children": [
+              {
+                "detail": 0,
+                "format": 0,
+                "mode": "normal",
+                "style": "",
+                "text": "E noua",
+                "type": "text",
+                "version": 1
+              }
+            ],
+            "direction": null,
+            "format": "",
+            "indent": 0,
+            "type": "paragraph",
+            "version": 1,
+            "textFormat": 0,
+            "textStyle": ""
+          }
+        ],
+        "direction": null,
+        "format": "",
+        "indent": 0,
+        "type": "root",
+        "version": 1
+      }
+    },
+    "image": null,
+    "updatedAt": "2026-02-11T18:52:54.396Z",
+    "createdAt": "2026-02-11T18:52:54.396Z"
+  },
+  {
     "id": 7,
     "title": "Tiramisu dichisit",
     "content": {
